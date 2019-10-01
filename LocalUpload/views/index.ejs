@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="ie=edge">
+    <title>Node File upload</title>
+</head>
+
+<body>
+    <div class="container">
+        <h1>File Upload</h1>
+        <%= typeof msg != 'undefined' ? msg : ''; %>
+        <form action="/upload" method="POST" enctype="multipart/form-data">
+            <div class="file-field input-field">
+                <div class="btn grey">
+                    <span>File</span>
+                    <input name="myImage" type="file">
+                </div>
+                <br>
+                <div class="file-path-wrapper">
+                    <input class="file-path valiadte" type="text">
+                </div>
+            </div>
+    <button type="submit" class="btn">Submit</button>
+    </form>
+    <br>
+    <img src="<%= typeof msg != 'undefined' ? file : ''; %>" class="responsive-img">
+    </div>
+</body>
+
+</html>
